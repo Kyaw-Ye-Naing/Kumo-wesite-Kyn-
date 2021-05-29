@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import colors from "./colors";
 import fonts from "./fonts";
 import { useMediaPredicate } from "react-media-hook";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const HomeParagraph = (props) => {
-  const { imgRadius, isReverse, imgSrc, imgWidth, data, imgheight } = props;
+  const { imgRadius, isReverse, imgSrc, imgWidth, data, imgheight} = props;
   const [pageWidth, setPageWidth] = useState(window.innerWidth);
   const greaterThan610 = useMediaPredicate("(max-width: 610px)");
   useEffect(() => {
@@ -32,7 +34,7 @@ const HomeParagraph = (props) => {
           }}
         />
       </div>
-      <div className="m-container ">
+      <div className="m-container">
         <h3
           className="title "
           style={{

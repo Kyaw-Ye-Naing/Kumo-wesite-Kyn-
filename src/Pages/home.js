@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import ParaFragment from '../Feature/homeParagraph'
 import Development from '../Images/development.jpg'
 import realtimeImg from '../Images/ipbem.jpeg'
@@ -11,9 +11,13 @@ import Acbel1 from '../Images/acbel1.jpeg'
 import Crm from '../Images/crm.jpeg'
 import Crm1 from '../Images/crm1.jpeg'
 import Map from "../Feature/map"
-import ThreeImage from '../Feature/threeImage'
+import ThreeImage from '../Feature/threeImage';
+import  Homepageimage from '../Feature/homepageimage';
 import { useHistory } from 'react-router-dom';
 import { useMediaPredicate } from "react-media-hook";
+import WOW from 'wowjs/dist/wow.js';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   const history = useHistory();
@@ -22,23 +26,29 @@ const Home = () => {
   const greaterThan760 = useMediaPredicate("(min-width: 760px)");
   const greaterThan1370 = useMediaPredicate("(min-width: 1370px)");
   const greaterThan1050 = useMediaPredicate("(min-width: 1050px)");
-  const greaterThan610 = useMediaPredicate("(max-width: 610px)");
+  const lessThan599 = useMediaPredicate("(max-width: 599px)");
+  const lessThan641 = useMediaPredicate("(max-width: 641px)");
+  const greaterThan750=useMediaPredicate("(min-width:750px)");
+//365
+  useEffect(() => {
+   Aos.init(  {duration: 2000});
+  },[]);
   return (
     <div >
       <div className="py-3 my-4" >
         <div className="desktop-view">
           <div className="d-flex flex-wrap flex-md-nowrap flex-lg-nowrap flex-xl-nowrap px-2 justify-content-between pt-4">
             <div className="col-lg-5 col-xl-5 col-md-5 kumo-team">
-              <div className="kumo-text">
+              <div className="kumo-text" data-aos="fade-down" data-aos-offset="100">
                 <div
                   style={{
                     color: "#084C95",
                     textAlign: "left",
-                    fontSize: "104px",
+                    fontSize: lessThan641?"68px":"104px",
                     fontFamily: "Microsoft Sans Serif",
                     lineHeight: "80%",
                     zIndex: 2,
-                    marginTop: 100
+                    marginTop: lessThan641?30:100
                   }}
                 >
                   KUMO{" "}
@@ -55,13 +65,15 @@ const Home = () => {
                   SOLUTIONS
                 </div>
               </div>
-              <div className="committed-text">
+              <div className="committed-text" data-aos="fade-up" data-aos-offset="100">
                 <div
                   style={{
                     color: "#4B74AD",
                     textAlign: "left",
-                    fontSize: "35px",
+                    fontSize: lessThan641?"25px":"35px",
                     fontFamily: "Cambria",
+                    position:greaterThan750?"relative":"absolute",
+                    zIndex:1000
                   }}
                 >
                   Committed to People,{" "}
@@ -70,22 +82,25 @@ const Home = () => {
                   style={{
                     color: "#4B74AD",
                     textAlign: "left",
-                    fontSize: "35px",
+                    fontSize: lessThan641?"25px":"35px",
                     fontFamily: "Cambria",
-                    lineHeight: "80%"
+                    lineHeight: "80%",
+                    position:greaterThan750?"relative":"absolute",
+                    marginTop:greaterThan750?null:"29px",
+                    zIndex:1000
                   }}
                 >
                   Committed to the Future
              </div>
               </div>
-              <div className="vertion-local">
+              <div className="vertion-local" data-aos="fade-right" data-aos-offset="100">
                 <div
                   style={{
                     color: "#4B74AD",
                     textAlign: "left",
                     fontSize: "35px",
                     fontFamily: "Cambria",
-                    marginTop: "55px",
+                    marginTop: lessThan641?"36px":"55px",
                   }}
                 >
                   Vision
@@ -107,9 +122,10 @@ const Home = () => {
               </div>
             </div>
             <div className="d-flex flex-wrap flex-md-nowrap flex-lg-nowrap flex-xl-nowrap kumo" 
-            style={{opacity:greaterThan760?1:0.5,marginLeft:greaterThan610?0:null}}>
+            data-aos="fade-left"
+            style={{opacity:lessThan599?0.6:1}}>
            
-              <ThreeImage />
+              <ThreeImage/>
             </div>
 
           </div>
@@ -118,6 +134,7 @@ const Home = () => {
         <div
           className="d-flex justify-content-center development"
           style={{ marginTop: "80px", overflow: 'auto' }}
+          data-aos="zoom-in-up"
         >
           <ParaFragment
             imgSrc={Development}
@@ -263,7 +280,7 @@ const Home = () => {
             </div>
           </div>
           <div style={{ position: 'relative', zIndex: 1 }} >
-            <OurService />
+            <OurService/>
           </div>
         </div>
         <div className="d-flex justify-content-center mt-5">
@@ -335,7 +352,7 @@ const Home = () => {
             imgWidth={"400px"}
           />
         </div>
-        <div className="d-flex justify-content-start pt-3 px-2 mx-0 p-0 centralized" style={{ color: "#084C95" }}>
+        <div className="d-flex justify-content-start pt-4 px-2 mx-0 p-0 centralized" style={{ color: "#084C95" }}>
           {/* //justify-content-start */}
           <div
             className="col-lg-4 col-xl-4 col-md-4 image-box  pt-3  image-container"
@@ -381,16 +398,34 @@ const Home = () => {
           </div>
         </div>
         <div style={{ color: "#084C95", paddingLeft: "0px" }}>The system provides chiller system’s latest information with Map View, consuming side, report analysis and control. For user management, admin can add or edit or delete users and their information and control access limit for each user. </div>
-        <div className="d-flex justify-content-between pt-4 mt-3 centralized" style={{ color: "#084C95", marginLeft: '10px' }}>
+     
+        <div className="d-flex flex-wrap justify-content-center py-3 ">
+        <div
+                className="d-flex justify-content-center product"
+                style={{ marginTop: "30px" }}
+            >
+
+                <Homepageimage
+                    img1={Crm1}
+                    img2={Crm}
+                    isCircle={true}
+                    isReverse={false}
+                    data={productData3}
+                />
+            </div>
+        </div>
+        {/* <div className="d-flex justify-content-between pt-4 mt-3 centralized" 
+        style={{ color: "#084C95", marginLeft: '10px' }}>
           <div className="m-container" style={{ paddingTop: '10px' }} >
-            <h3>CRM Modules</h3>
-            {/* <hr style={{ marginTop: -4,marginRight: 50  }}></hr> */}
-            <div className=" m-title p-0 m-0 container-fluid" style={{ display: 'block', height: '2px', width: '100%' }}></div>
+            <h3>CRM Modules</h3> */}
+            {/* <hr style={{ marginTop: -4,marginRight: 50  }}></hr>--og comment-- */}
+            {/* <div className=" m-title p-0 m-0 container-fluid" style={{ display: 'block', height: '2px', width: '100%' }}></div>
             <p>Customer Relationship Management (CRM) project was developed to enhance better communication with customers for Australia based company, Brennan IT product Portal. The main objective is to be able to view and manage orders easily. Users can analyse revenue and gross margin by month, products and customers. The system will create daily and monthly catalogues and send mails to relevant customers, sales team and client manager. Moreover, users are able to view reports by product, vendor, month and the system is able to send mails to relevant clients, managers and sale reps.
             </p>
           </div>
           <div
             className=" col-lg-4 col-xl-4 col-md-6 px-0 mx-0 py-3 my-4 image-box" 
+           
             style={{ maxHeight: 100, position: "relative", display: "block", marginLeft: -50 }}
           >
             <div
@@ -424,7 +459,7 @@ const Home = () => {
 
             </div>
           </div>
-          </div>
+          </div> */}
         </div>
         
        
@@ -502,8 +537,8 @@ const productData1 = {
 //     "The system provides chiller system’s latest information with Map View, consuming side, report analysis and control. For user management, admin can add or edit or delete users and their information and control access limit for each user.",
 // };
 
-// const productData3 = {
-//   title: "CRM Modules",
-//   description1:
-//     "Customer Relationship Management (CRM) project was developed to enhance better communication with customers for Australia based company, Brennan IT product Portal. The main objective is to be able to view and manage orders easily. Users can analyse revenue and gross margin by month, products and customers. The system will create daily and monthly catalogues and send mails to relevant customers, sales team and client manager. Moreover, users are able to view reports by product, vendor, month and the system is able to send mails to relevant clients, managers and sale reps.",
-// };
+const productData3 = {
+  title: "CRM Modules",
+  description1:
+    "Customer Relationship Management (CRM) project was developed to enhance better communication with customers for Australia based company, Brennan IT product Portal. The main objective is to be able to view and manage orders easily. Users can analyse revenue and gross margin by month, products and customers. The system will create daily and monthly catalogues and send mails to relevant customers, sales team and client manager. Moreover, users are able to view reports by product, vendor, month and the system is able to send mails to relevant clients, managers and sale reps.",
+};

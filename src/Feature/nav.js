@@ -13,18 +13,35 @@ const Nav = () => {
   let location = useLocation();
   let loc = location.pathname;
   return (
-  
-    <div className='p-0 m-0 d-flex justify-content-center align-self-center ' >
-      <nav class="navbar navbar-expand-md navbar-light bg-light p-0 w-100 shadow-sm m-0" style={{ position:'absolute', zIndex:1000 }}>
-        <div class="container-fluid d-flex justify-content-between ">
-        <img className="navbar-brand mx-3 pr-3" src={"/kumo.png"} style={{ width: window.innerWidth > 600 ? 75 : 60, height: 50 }} ></img>
+    <div className="p-0 m-0 d-flex justify-content-center align-self-center">
+      <nav
+        class="navbar navbar-expand-md navbar-light bg-light p-0 w-100 shadow-sm m-0"
+        style={{ position: "absolute", zIndex: 1000 }}
+      >
+        <div class="container-fluid d-flex justify-content-between">
+          <img
+            className="navbar-brand mx-3 pr-3"
+            src={"/kumo.png"}
+            style={{ width: window.innerWidth > 600 ? 75 : 60, height: 50 }}
+          ></img>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse col-8 justify-content-end"  id="navbarSupportedContent" style={{  }}>
-          <Switch
-            >
+          <div
+            class="collapse navbar-collapse col-8 justify-content-end"
+            id="navbarSupportedContent"
+            style={{}}
+          >
+            <Switch>
               <div className="navbar-nav">
                 <Link
                   to="/home"
@@ -34,12 +51,15 @@ const Nav = () => {
                     fontWeight: loc.includes("home") ? 600 : 400,
                   }}
                 >
-                  <div className='py-2 px-3' data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                  <div
+                    className="py-2 px-3 cool-link"
+
+                    data-bs-toggle="collapse"
+                    data-bs-target=".navbar-collapse.show"
                     style={{
-                      color: loc.includes("home")
-                        ? "#775ADA" : '#084C95',
-                        borderRadius :6
-,                      fontWeight: loc.includes("home") ? 600 : 400,
+                      color: loc.includes("home") ? "#775ADA" : "#084C95",
+                      borderRadius: 6,
+                      fontWeight: loc.includes("home") ? 600 : 400,
                     }}
                   >
                     Home
@@ -53,15 +73,18 @@ const Nav = () => {
                     fontWeight: loc.includes("about") ? 600 : 400,
                   }}
                 >
-                  <div className='py-2 px-3' data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                  <div
+                    className="py-2 px-3 cool-link"
+                    data-bs-toggle="collapse"
+                    data-bs-target=".navbar-collapse.show"
                     style={{
-                      color: loc.includes("about")
-                        ? "#775ADA" : '#084C95',
-                        borderRadius :6
-,                      fontWeight: loc.includes("about") ? 600 : 400,
+                      color: loc.includes("about") ? "#775ADA" : "#084C95",
+                      borderRadius: 6,
+                      fontWeight: loc.includes("about") ? 600 : 400,
                     }}
                   >
-                      About Us</div>
+                    About Us
+                  </div>
                 </Link>
 
                 <Link
@@ -72,15 +95,18 @@ const Nav = () => {
                     fontWeight: loc.includes("services") ? 600 : 400,
                   }}
                 >
-                  <div className='py-2 px-3' data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                  <div
+                    className="py-2 px-3 cool-link"
+                    data-bs-toggle="collapse"
+                    data-bs-target=".navbar-collapse.show"
                     style={{
-                      color: loc.includes("services")
-                        ? "#775ADA" : '#084C95',
-                        borderRadius :6
-,                      fontWeight: loc.includes("services") ? 600 : 400,
+                      color: loc.includes("services") ? "#775ADA" : "#084C95",
+                      borderRadius: 6,
+                      fontWeight: loc.includes("services") ? 600 : 400,
                     }}
                   >
-                      Services</div>
+                    Services
+                  </div>
                 </Link>
                 <Link
                   to="/products"
@@ -90,15 +116,18 @@ const Nav = () => {
                     fontWeight: loc.includes("products") ? 600 : 400,
                   }}
                 >
-                  <div className='py-2 px-3' data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                  <div
+                    className="py-2 px-3 cool-link"
+                    data-bs-toggle="collapse"
+                    data-bs-target=".navbar-collapse.show"
                     style={{
-                      color: loc.includes("products")
-                        ? "#775ADA" : '#084C95',
-                        borderRadius :6
-,                      fontWeight: loc.includes("products") ? 600 : 400,
+                      color: loc.includes("products") ? "#775ADA" : "#084C95",
+                      borderRadius: 6,
+                      fontWeight: loc.includes("products") ? 600 : 400,
                     }}
                   >
-                      Products</div>
+                    Products
+                  </div>
                 </Link>
                 <Link
                   to="/contact"
@@ -108,15 +137,18 @@ const Nav = () => {
                     fontWeight: loc.includes("contact") ? 600 : 400,
                   }}
                 >
-                  <div className='py-2 px-3' data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                  <div
+                    className="py-2 px-3 cool-link"
+                    data-bs-toggle="collapse"
+                    data-bs-target=".navbar-collapse.show"
                     style={{
-                      color: loc.includes("contact")
-                        ? "#775ADA" : '#084C95',
-                        borderRadius :6
-,                      fontWeight: loc.includes("contact") ? 600 : 400,
+                      color: loc.includes("contact") ? "#775ADA" : "#084C95",
+                      borderRadius: 6,
+                      fontWeight: loc.includes("contact") ? 600 : 400,
                     }}
                   >
-                      Contact</div>
+                    Contact
+                  </div>
                 </Link>
               </div>
             </Switch>
@@ -137,7 +169,6 @@ const Nav = () => {
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
               </li>
             </ul> */}
-            
           </div>
         </div>
       </nav>

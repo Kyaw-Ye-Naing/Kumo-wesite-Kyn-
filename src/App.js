@@ -17,6 +17,7 @@ import Footer from "./Feature/footer";
 import Bg from '../src/Images/bg.svg';
 import { PageTransition } from '@steveeeie/react-page-transition';
 
+
 const App = () => {
   let location = useLocation();
   let loc = location.pathname;

@@ -39,11 +39,13 @@ import colors from "./colors";
 import fonts from "./fonts";
 
 const ProductParagraph = props => {
-    const { data, imgSrc, imgWidth, isReverse,imgheight } = props
+    const { data, imgSrc, imgWidth, isReverse,imgheight,isCircle=false } = props
 
     return (
         < div  style={{ margin: '30px 30px 0 0' }}>
-            <div className='' style={{ float: isReverse ? 'left' : 'right' }}><img className=' img-fluid' src={imgSrc} style={{
+            <div className='' style={{ float: isReverse ? 'left' : 'right' }}>
+               
+                <img className=' img-fluid' src={imgSrc} style={{
                 display: 'block', width: imgWidth,
                 height:imgheight,
                 // height: '185px',
@@ -53,7 +55,8 @@ const ProductParagraph = props => {
                 paddingRight:20,
                 // marginTop: -30
 
-            }} /></div>
+            }} />
+            </div>
             <div className="m-container">
                 <h3 className="title" style={{ color: '#084C95', textAlign: isReverse ? 'right' : 'left', font: 'normal normal normal 30px/36px Microsoft Sans Serif' }} >{data.title}</h3>
                 <div className=" p-0 m-0 m-title" style={{ display: 'block' }}></div>
