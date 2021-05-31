@@ -7,10 +7,12 @@ import Developers from '../Images/DEVELOPERS.jpg'
 import fonts from '../Feature/fonts'
 import Footer from '../Feature/footer'
 import Color from '../Feature/colors'
-import '../App.css'
+import '../App.css';
+import { useMediaPredicate } from "react-media-hook";
 
 const About = () => {
     const windowWidth = window.innerWidth
+    const lessThan769=useMediaPredicate("(max-width:769px)");
     return (
         <div style={{}}>
             <div>
@@ -23,7 +25,7 @@ const About = () => {
                         data={AboutCompany}
                     // imgheight={'200px'}
                     />
-                    <div className='col-11' style={{ paddingLeft: '10px', color: Color.ParagraphColor, wordSpacing: 4, fontSize: '15px' }}>
+                    <div className='col-11' style={{textAlign:"justify", paddingLeft: '10px', color: Color.ParagraphColor, wordSpacing: 4, fontSize: '15px' }}>
                         <p>To provide satisfying products to our customers, we utilize object-oriented analysis, design, and testing methodologies and ensure seamless integration and
                         traceability between the project’s requirements, design, development, quality assurance, and delivery.
                         Our goal is not only to achieve local and global customers but also to support the development of the domestic Information Technology Industry.
@@ -43,10 +45,10 @@ const About = () => {
                             <p>The team is made up of 20 local talents who strive for the continual development of innovative and exceptional skills by adopting international & the foremost practice standards. We maintain continuous improvements by promoting a learning environment, ensuring that our employees are exposed to and trained on state-of-the-art technologies. As a team, we continue to learn together, creating a collaborative environment encouraging individual and organizational growth and development. The work environment in the company reflects a professional approach to dedicated team spirit and serves as a motivational ground for the professional and personal growth of the software talent.</p></div>
                     </div>
                 </div>
-                <div className="col-11 m-container mb-5 mobile-view" style={{ color: colors.ParagraphColor, fontSize: '15px', wordSpacing: 4, marginTop: '3%' }}>
-                    <div className="ms-3 me-2" style={{ whiteSpace: 'nowrap', color: colors.TitleColor, fontSize: fonts.heading12, fontWeight: 400 }}>Team Introduction</div>
+                <div className="col-12 m-container mb-5 mobile-view" style={{ textAlign:"justify",color: colors.ParagraphColor, fontSize: '15px', wordSpacing: 4, marginTop: '3%' }}>
+                    <div className="ms-3 me-2" style={{ paddingLeft:"10px",whiteSpace: 'nowrap', color: colors.TitleColor, fontSize: fonts.heading12, fontWeight: 400 }}>Team Introduction</div>
                     <div className={`dropdown-divider m-title border-0 p-0`} style={{ backgroundColor: '', height: "2px" }}></div>
-                    <div className="ms-3 me-2">The team is made up of 20 local talents who strive for the continual development of innovative and exceptional skills by adopting international & the foremost practice standards. We maintain continuous improvements by promoting a learning environment, ensuring that our employees are exposed to and trained on state-of-the-art technologies. As a team, we continue to learn together, creating a collaborative environment encouraging individual and organizational growth and development. The work environment in the company reflects a professional approach to dedicated team spirit and serves as a motivational ground for the professional and personal growth of the software talent.</div>
+                    <div className="ms-3 me-2" style={{paddingLeft:"10px",paddingRight:"40px"}}>The team is made up of 20 local talents who strive for the continual development of innovative and exceptional skills by adopting international & the foremost practice standards. We maintain continuous improvements by promoting a learning environment, ensuring that our employees are exposed to and trained on state-of-the-art technologies. As a team, we continue to learn together, creating a collaborative environment encouraging individual and organizational growth and development. The work environment in the company reflects a professional approach to dedicated team spirit and serves as a motivational ground for the professional and personal growth of the software talent.</div>
                 </div>
                 {/* height: '250px', width: '320px', */}
                 <div className="d-flex flex-wrap justify-content-center py-3 my-2 " style={{}}>
@@ -59,10 +61,16 @@ const About = () => {
                     // imgheight={'95px'}
                     />
                 </div>
-                <div className="col-12 ms-3 me-2 m-container mb-5 " style={{ color: colors.ParagraphColor, fontSize: '18px', wordSpacing: 4, marginTop: '3%' }}>
-                    <div className="me-2" style={{ whiteSpace: 'nowrap', color: colors.TitleColor, fontSize: fonts.heading12, fontWeight: 400 }}>Operations</div>
+                <div className="col-12 ms-3 me-2 m-container mb-5 " style={{ textAlign:"justify",color: colors.ParagraphColor, fontSize: '18px', wordSpacing: 4, marginTop: '3%' }}>
+                    <div className="me-2" style={{ whiteSpace: 'nowrap', color: colors.TitleColor, fontSize: fonts.heading12, 
+                    paddingLeft:"40px",
+                    fontWeight: 400 }}>
+                        Operations</div>
                     <div className={`dropdown-divider m-title border-0 p-0`} style={{ backgroundColor: '', height: "2px" }}></div>
-                    <div className="me-2">Kumo Solutions is dedicated to transforming our consumers’ needs into fully realized and satisfying products by comprehensively understanding our clients’ business requirements and delivering beyond their expectations. Our commitment and dedication are backed by the necessary technological skill and innovation as we craft software customized to the needs of each individual consumers’ daily operations. Our software development process is continuously monitored and improved to maximize our client’s ease and productivity.</div>
+                    {/* me-2 */}
+                    <div className="d-flex justify-content-center py-3 my-2"
+                    style={{paddingLeft:lessThan769?"20px":"40px",paddingRight:lessThan769?"60px":"80px"}}>
+                        Kumo Solutions is dedicated to transforming our consumers’ needs into fully realized and satisfying products by comprehensively understanding our clients’ business requirements and delivering beyond their expectations. Our commitment and dedication are backed by the necessary technological skill and innovation as we craft software customized to the needs of each individual consumers’ daily operations. Our software development process is continuously monitored and improved to maximize our client’s ease and productivity.</div>
                 </div>
             </div>
         </div>

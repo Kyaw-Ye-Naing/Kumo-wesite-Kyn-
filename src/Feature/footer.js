@@ -23,7 +23,7 @@ const Footer = () => {
                 <Map style={{ borderRadius: 20 }} />
               </div>
 
-              <div class="col-lg-4 col-md-6 mb-2">
+              <div class="col-lg-4 col-md-6 mb-2 pl-0">
                 <img src={Location} alt="img" style={{}} />
                 <div
                   style={{
@@ -45,7 +45,7 @@ const Footer = () => {
                   </p>
                 </div>
                 <br></br>
-                <img src={Phone} alt="facebook" width={25} />
+                <img src={Phone} alt="facebook" width={25} style={{marginLeft:"10px"}}/>
                 <span style={{ paddingLeft: 30 }}>(+95) 9-774 477 275</span>
               </div>
 
@@ -91,14 +91,15 @@ const Footer = () => {
                     lineHeight: "0.1cm",
                     marginTop: 20,
                     whiteSpace: "nowrap",
-                    marginLeft: -30,
+                    marginLeft: 0,
+                    fontSize: "small"
                   }}
                 >
                   105 & 106 Street, Mandalay, Myanmar
                 </p>
               </div>
               <br></br>
-              <img src={Phone} alt="facebook" width={25} />
+              <img src={Phone} alt="facebook" width={25} style={{marginLeft:"10px"}}/>
               <span style={{ paddingLeft: 30 }}>(+95) 9-774 477 275</span>
             </div>
             <div

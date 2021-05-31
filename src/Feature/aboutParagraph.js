@@ -20,13 +20,14 @@ const AboutParagraph = (props) => {
                 <div className='m-container px-2' style={{ display: 'inline-block'}}>
                     <div className={`${isReverse && 'me-2'} about-title`} style={{ whiteSpace: 'nowrap', color: Color.TitleColor, fontSize: Font.heading12, fontWeight: 400 }}>{data.title}</div>
                     <div className={`m-title border-0 mx-1`} style={{ backgroundColor: '', height: "", width:"100%",marginLeft: -30 }}></div>
-                    <div className='d-flex flex-sm-wrap flex-xs-wrap   me-2 description' style={{ color: Color.ParagraphColor, fontSize: '18px',paddingRight:"50px"  }}>
+                    <div className='d-flex flex-sm-wrap flex-xs-wrap   me-2 description' style={{ color: Color.ParagraphColor, fontSize: '18px',textAlign:"justify"  }}>
+                    {/* paddingRight:"50px" */}
                         {data.description1}
                     </div>
-                    <div className=' me-2 mt-1' style={{ color: Color.ParagraphColor, fontSize: '18px' }}>
+                    <div className=' me-2 mt-1' style={{ textAlign:"justify",color: Color.ParagraphColor, fontSize: '18px' }}>
                         {data.description2}
                     </div>
-                    <div className='me-2 mt-1' style={{ color: Color.ParagraphColor, fontSize: '18px'}}>
+                    <div className='me-2 mt-1' style={{ textAlign:"justify",color: Color.ParagraphColor, fontSize: '18px'}}>
                         {data.description3}
                     </div>                     
                 </div>

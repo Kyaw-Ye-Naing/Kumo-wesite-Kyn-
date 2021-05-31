@@ -753,7 +753,8 @@ code {
 }
 @media only screen and (max-width: 1350px) {
   .image-container{
-    margin-left: 100px;
+    margin-left: 20px;
+    /* 100px */
   }
   .acb1{
     margin-left: -20%;

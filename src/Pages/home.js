@@ -29,6 +29,8 @@ const Home = () => {
   const lessThan599 = useMediaPredicate("(max-width: 599px)");
   const lessThan641 = useMediaPredicate("(max-width: 641px)");
   const greaterThan750=useMediaPredicate("(min-width:750px)");
+  const greaterThan1700=useMediaPredicate("(min-width:1700px)");
+  const greaterThan1950=useMediaPredicate("(min-width:1950px)");
 //365
   useEffect(() => {
    Aos.init(  {duration: 2000});
@@ -356,7 +358,9 @@ const Home = () => {
           {/* //justify-content-start */}
           <div
             className="col-lg-4 col-xl-4 col-md-4 image-box  pt-3  image-container"
-            style={{ maxHeight: 600, position: "relative", display: "block" }}
+            style={{ maxHeight: 600, position: "relative", display: "block" ,
+            marginLeft:greaterThan1700?"-120px":null
+          }}
           >
             <div
               className="d-flex justify-content-center align-items-start "
@@ -366,7 +370,8 @@ const Home = () => {
                 className="img-fluid shadow acb1"
                 src={Acbel1}
                 alt="view"
-                style={{ width: 320, height: 150, borderRadius: 30, left: greaterThan1370?10:50 }}
+                style={{ width: 320, height: 150, borderRadius: 30, left: greaterThan1370?10:50 ,
+                marginLeft:greaterThan1950?"100px":null}}
               />
             </div>
             <div
@@ -383,7 +388,8 @@ const Home = () => {
                   borderRadius: 30,
                   position: "absolute",
                   left: greaterThan1370?10:50,
-                  top: -24
+                  top: -24,
+                  marginLeft:greaterThan1950?"120px":null
                 }}
               />
             </div>
@@ -393,7 +399,7 @@ const Home = () => {
             <h3>Taiwan Centralized</h3>
 
             <div className=" m-title p-0 m-0" style={{ display: 'block', width: '100%' }}></div>
-            <p>Taiwan Centralized Project for Acbel is the centralized chiller system for monitoring Energy and power consumptions of chillers, cooling towers, zone pumps and etc. It controls multiple sites for saving opportunity and validating measurable saving results by using data visualizations and data driven approaches. It consists of MyApps and User Management system in which MyApps provides five main parts for chiller system and User Management for authorizing user access to the system.
+            <p style={{textAlign:"justify"}}>Taiwan Centralized Project for Acbel is the centralized chiller system for monitoring Energy and power consumptions of chillers, cooling towers, zone pumps and etc. It controls multiple sites for saving opportunity and validating measurable saving results by using data visualizations and data driven approaches. It consists of MyApps and User Management system in which MyApps provides five main parts for chiller system and User Management for authorizing user access to the system.
             </p>
           </div>
         </div>

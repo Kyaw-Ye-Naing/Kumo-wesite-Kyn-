@@ -25,6 +25,7 @@ const Homepageimage = (props) => {
           className="m-paragraph"
           style={{
             fontSize: "18px",
+            textAlign:"justify"
           }}
         >
           <p

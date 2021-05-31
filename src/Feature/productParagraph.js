@@ -61,7 +61,7 @@ const ProductParagraph = props => {
                 <h3 className="title" style={{ color: '#084C95', textAlign: isReverse ? 'right' : 'left', font: 'normal normal normal 30px/36px Microsoft Sans Serif' }} >{data.title}</h3>
                 <div className=" p-0 m-0 m-title" style={{ display: 'block' }}></div>
                 <div className='m-paragraph' style={{
-                    fontSize: "18px"
+                    fontSize: "18px",textAlign:"justify"
                 }}>
                     <p className=' ms-3 me-3' style={{ color: colors.TitleColor, whiteSpace:'wrap' }}>{data.description1}</p>
                     <p className=' ms-3 me-2' style={{ color: colors.TitleColor, whiteSpace:'wrap' }}>{data.description2}</p>

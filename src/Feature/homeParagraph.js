@@ -49,7 +49,7 @@ const HomeParagraph = (props) => {
           className="dropdown-divider-1 ud_line p-0 m-0 m-title "
           style={{ display: "block" }}
         ></div>
-        <div className="m-paragraph px-2">
+        <div className="m-paragraph px-2" style={{textAlign:"justify"}}>
           <p style={{ color: colors.ParagraphColor }}>{data.description1}</p>
           <p style={{ color: colors.ParagraphColor }}>{data.description2}</p>
           <p style={{ color: colors.ParagraphColor }}>{data.description3}</p>
