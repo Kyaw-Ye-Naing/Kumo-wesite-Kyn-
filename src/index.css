@@ -10,6 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   overflow-x:hidden;
+  overflow-y: scroll;
 
 }
 /* .about-company{
@@ -846,6 +847,10 @@ footer .copyright {
 }
 
 .transition-container,.transition-container .bDqItY {
-  overflow: auto;
+  overflow: scroll;
+  /* auto */
   overflow-x: hidden;
+}
+*{
+  overflow-y: scroll;
 }
