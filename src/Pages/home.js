@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react'
+import colors from "../Feature/colors";
 import ParaFragment from '../Feature/homeParagraph'
 import Development from '../Images/development.jpg'
 import realtimeImg from '../Images/ipbem.jpeg'
@@ -31,6 +32,8 @@ const Home = () => {
   const greaterThan750=useMediaPredicate("(min-width:750px)");
   const greaterThan1700=useMediaPredicate("(min-width:1700px)");
   const greaterThan1950=useMediaPredicate("(min-width:1950px)");
+  const lessThan540=useMediaPredicate("(max-width:540px)");
+  const lessThan601=useMediaPredicate("(max-width:601px)");
 //365
   useEffect(() => {
    Aos.init(  {duration: 2000});
@@ -354,6 +357,8 @@ const Home = () => {
             imgWidth={"400px"}
           />
         </div>
+
+        <div className="home-paragraph-destop">
         <div className="d-flex justify-content-start pt-4 px-2 mx-0 p-0 centralized" style={{ color: "#084C95" }}>
           {/* //justify-content-start */}
           <div
@@ -403,7 +408,8 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div style={{ color: "#084C95", paddingLeft: "0px" }}>The system provides chiller system’s latest information with Map View, consuming side, report analysis and control. For user management, admin can add or edit or delete users and their information and control access limit for each user. </div>
+        <div style={{ color: "#084C95", paddingLeft: "0px" }}>The system provides chiller system’s latest information with Map View, consuming side, 
+        report analysis and control. For user management, admin can add or edit or delete users and their information and control access limit for each user. </div>
      
         <div className="d-flex flex-wrap justify-content-center py-3 ">
         <div
@@ -420,6 +426,158 @@ const Home = () => {
                 />
             </div>
         </div>
+        </div>
+
+
+      <div className="home-paragraph-mobile">
+    
+  
+    <div className="pt-4 px-2 mx-0 p-0 centralized" style={{ color: "#084C95" }}>
+    
+    <h3 className="taiwan">Taiwan Centralized</h3>
+<div className=" m-title p-0 m-0" style={{ display: 'block', width: '100%' }}></div>
+          {/* //justify-content-start */}
+          <div
+            className="image-box pt-3 mb-1 image-container d-flex justify-content-center align-items-center"
+            style={{ maxHeight: 600, position: "relative", display: "block" ,
+            marginTop:"40px",
+           // marginLeft:greaterThan1700?"-120px":null
+          }}
+          >
+            <div
+              className="d-flex justify-content-center align-items-center"
+              style={{}}
+            >
+              <img
+                className="img-fluid shadow acb1"
+                src={Acbel1}
+                alt="view"
+                style={{ width: lessThan540?300:450, borderRadius: 30,left:"5%"
+                  // height:150
+               }}
+              />
+            </div>
+            <div
+              className="d-flex justify-content-center align-items-center"
+              style={{}}
+            >
+              <img
+                className="img-fluid shadow acb"
+                src={Acbel}
+                alt="view"
+                style={{
+                  width: lessThan540?310:460,
+                  // height: 150,
+                  borderRadius: 30,
+                  position: "absolute",
+                  left:lessThan601?"25%":"45%",
+                  top: -24,
+                  marginLeft:greaterThan1950?"120px":null
+                }}
+              />
+            </div>
+          </div>
+          <div className="m-container centralized-layout"  style={{ marginLeft:greaterThan1050?"-4%":"-1%" }}>
+         
+           
+            <p style={{textAlign:"justify"}}>Taiwan Centralized Project for Acbel is the centralized chiller system for monitoring Energy and power consumptions of chillers, cooling towers, zone pumps and etc. It controls multiple sites for saving opportunity and validating measurable saving results by using data visualizations and data driven approaches. It consists of MyApps and User Management system in which MyApps provides five main parts for chiller system and User Management for authorizing user access to the system.
+            </p>
+          </div>
+        </div>
+ 
+     
+        <div style={{ color: "#084C95", paddingLeft: "0px" }}>The system provides chiller system’s latest information with Map View, consuming side, 
+        report analysis and control. For user management, admin can add or edit or delete users and their information and control access limit for each user. </div>
+     
+        <div className="d-flex flex-wrap justify-content-center py-3 ">
+        <div
+                className="d-flex justify-content-center product"
+                style={{ marginTop: "30px" }}
+            >
+
+<div className="d-flex justify-content-between centralized crm-mobile" style={{ margin: "30px 30px 0 0" }}>
+      <div className="m-container">
+        <h3
+          className="title"
+          style={{
+            color: "#084C95",
+            textAlign: "left",
+            font: "normal normal normal 30px/36px Microsoft Sans Serif",
+          }}
+        >
+         CRM Modules
+        </h3>
+        <div className=" p-0 m-0 m-title" style={{ display: "block" }}></div>
+        <div className="d-flex justify-content-center align-items-center pt-3 mt-3">
+        {/* style={{ float: isReverse ? 'left' : 'right' }} */}
+          <div
+            className="px-0 mx-0 my-4 image-box"
+            style={{
+              maxHeight: 100,
+              position: "relative",
+              display: "block",
+              marginLeft: -50,
+            }}
+            // style={{ maxHeight: 100, position: "relative", display: "block", marginLeft: -50,float:"right" }}
+          >
+            <div className="px-3 mx-3  d-flex  justify-content-center align-items-center crm-container" style={{}}>
+              <img
+                className="img-fluid shadow crm1"
+                src={Crm1}
+                alt="view"
+                style={{
+                  width: 175,
+                  height: 175,
+                  borderRadius: "50%",
+                  position: "absolute",
+                  left: -4,
+                  top: 10,
+                }}
+              />
+            </div>
+            <div className="px-4 mx-4 d-flex justify-content-center align-items-center" style={{ marginTop: -40 }}>
+              <img
+                className="img-fluid shadow crm"
+                src={Crm}
+                alt="view"
+                style={{
+                  width: lessThan540?230:250,
+                  height: lessThan540?230:250,
+                  borderRadius: "50%",
+                  marginLeft: "52px",
+                }}
+              />
+            </div>
+          </div>
+      </div>
+        <div
+          className="m-paragraph"
+          style={{
+            fontSize: "18px",
+            textAlign:"justify",
+            position:"relative"
+            
+          }}
+        >
+          <p
+            className=" ms-3 me-3"
+            style={{ color: colors.TitleColor, whiteSpace: "wrap",marginTop:"100px" }}
+          >
+           Customer Relationship Management (CRM) project was developed to enhance better communication with customers for Australia 
+           based company, Brennan IT product Portal. The main objective is to be able to view and manage orders easily. Users can analyse revenue and 
+           gross margin by month, products and customers. The system will create daily and monthly catalogues and send mails to relevant customers, sales
+            team and client manager. Moreover, users are able to view reports by product, vendor, month and the system is able to send mails to relevant clients,
+             managers and sale reps.",
+          </p>
+        </div>
+      </div>
+     
+
+    </div>
+            </div>
+        </div>
+</div>
+        
         {/* <div className="d-flex justify-content-between pt-4 mt-3 centralized" 
         style={{ color: "#084C95", marginLeft: '10px' }}>
           <div className="m-container" style={{ paddingTop: '10px' }} >

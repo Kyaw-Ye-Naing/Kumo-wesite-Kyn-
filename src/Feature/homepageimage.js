@@ -6,9 +6,13 @@ import { useMediaPredicate } from "react-media-hook";
 const Homepageimage = (props) => {
   const { data, img1, img2, isCircle, isReverse} = props;
   const greaterThan1025=useMediaPredicate("(min-width:1025px)");
+  const greaterThan1365=useMediaPredicate("(min-width:1365px)");
+  const lessThan1364=useMediaPredicate("(max-width:1364px)");
+
 
   return (
-    <div className="d-flex justify-content-between centralized" style={{ margin: "30px 30px 0 0" }}>
+    <div>
+ <div className="d-flex justify-content-between centralized crm-destop" style={{ margin: "30px 30px 0 0" }}>
       <div className="m-container" style={{width:greaterThan1025?"82%":null}}>
         <h3
           className="title"
@@ -93,6 +97,8 @@ const Homepageimage = (props) => {
         )}
       </div>
     </div>
+    </div>
+   
   );
 };
 
